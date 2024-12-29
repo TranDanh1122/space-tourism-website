@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="stylesheet" href="./styles/crew.css">
+    <title>Frontend Mentor | Space tourism website</title>
+</head>
+
+<body>
+    <header class="container">
+        <nav class="nav">
+            <div class="nav__bg"></div>
+            <img src="./assets/shared/logo.svg" class="nav__logo" alt="logo"></img>
+            <div class="nav__line"></div>
+            <ul class="nav__menu">
+                <li class="nav__item">
+                    <a href="index.html" class="nav__link" title="Home">
+                        <span class="nav__order">00</span>
+                        Home
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="crew.html" class="nav__link" title="crew">
+                        <span class="nav__order">01</span>
+                        crew
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="crew.html" class="nav__link" title="Crew">
+                        <span class="nav__order">02</span>
+                        Crew
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="technology.html" class="nav__link" title="Technology">
+                        <span class="nav__order">03</span>
+                        Technology
+                    </a>
+                </li>
+            </ul>
+            <i src="./assets/shared/icon-hamburger.svg" class="nav__mobile_menu" alt="nav__mobile_menu"></i>
+        </nav>
+    </header>
+
+
+    <main class="container">
+        <div class="crew">
+            <h1 class="crew__step"> <span>02</span> Meet your crew</h1>
+            <div class="tab">
+                <div class="tab__content">
+                    <div class="crew__info">
+                        <div class="crew__content">
+                            <span class="crew__position">Commander</span>
+                            <h2 class="crew__name"> Douglas Hurley</h2>
+                            <p class="crew__desc"> Douglas Gerald Hurley is an American engineer, former Marine Corps
+                                pilot
+                                and former NASA astronaut. He launched into space for the third time as
+                                commander of Crew Dragon Demo-2.</p>
+                        </div>
+                    </div>
+                    <ul class="tab__nav">
+                        <li active tabindex="1" class="tab__item"></li>
+                        <li tabindex="2" class="tab__item"></li>
+                        <li tabindex="3" class="tab__item"></li>
+                        <li tabindex="4" class="tab__item"></li>
+                    </ul>
+                </div>
+
+                <div id="img_wrapper">
+                    <img loading="eager" src="./assets/crew/image-douglas-hurley.png" class="crew__image" alt="Moon">
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+</body>
+<script src="../vendor/script.js"></script>
+<script src="../vendor/tab.js"></script>
+<script>
+    let setContent = (data) => {
+        return `
+                <div class="crew__content">
+                            <span class="crew__position">${data.role}</span>
+                            <h2 class="crew__name">${data.name}</h2>
+                            <p class="crew__desc"> ${data.bio}</p>
+                        </div>`
+    }
+    let setImage = (src, name) => `<img loading="eager" src="${src}" class="crew__image" alt="${name}">`
+    let image = document.querySelector('#img_wrapper')
+    let contentWrapper = document.querySelector('.crew__info')
+    window.coreTab.init("crew", contentWrapper, setContent, image, setImage, "webp")
+</script>
+
+</html>

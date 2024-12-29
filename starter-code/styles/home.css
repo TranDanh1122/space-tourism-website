@@ -1,4 +1,5 @@
 @import url(./common/header.css);
+@import url(./common/animation.css);
 
 body {
     background-image: url(../assets/home/background-home-desktop.jpg);
@@ -70,139 +71,12 @@ main {
     z-index: -1;
     display: block;
     border-radius: 50%;
-    animation: border 6s infinite;
+    animation: border 3s linear infinite;
     box-sizing: content-box;
 
 }
 
 
-@keyframes border {
-    0% {
-        top: 0;
-        left: 0;
-        border: unset;
-    }
-
-    5% {
-        top: calc(-1 * var(--px8));
-        left: calc(-1 * var(--px8));
-        border: var(--px8) solid rgba(255, 255, 255, .375);
-    }
-
-    10% {
-        top: calc(-1 * var(--px16));
-        left: calc(-1 * var(--px16));
-        border: var(--px16) solid rgba(255, 255, 255, .75);
-    }
-
-    15% {
-        top: calc(-1 * var(--px24));
-        left: calc(-1 * var(--px24));
-        border: var(--px24) solid rgba(255, 255, 255, .625);
-    }
-
-    20% {
-        top: calc(-1 * var(--px32));
-        left: calc(-1 * var(--px32));
-        border: var(--px32) solid rgba(255, 255, 255, .5);
-    }
-
-    25% {
-        top: calc(-1 * var(--px40));
-        left: calc(-1 * var(--px40));
-        border: var(--px40) solid rgba(255, 255, 255, .375);
-    }
-
-    30% {
-        top: calc(-1 * var(--px48));
-        left: calc(-1 * var(--px48));
-        border: var(--px48) solid rgba(255, 255, 255, .25);
-    }
-
-    35% {
-        top: calc(-1.75 * var(--px32));
-        left: calc(-1.75 * var(--px32));
-        border: calc(1.75 * var(--px32)) solid rgba(255, 255, 255, .15);
-    }
-
-    40% {
-        top: calc(-1 * var(--px64));
-        left: calc(-1 * var(--px64));
-        border: var(--px64) solid rgba(255, 255, 255, .05);
-    }
-
-    45% {
-        top: calc(-1.125 * var(--px64));
-        left: calc(-1.125 * var(--px64));
-        border: calc(1.125 * var(--px64)) solid rgba(255, 255, 255, .025);
-    }
-
-    50% {
-        top: calc(-1 * var(--px80));
-        left: calc(-1 * var(--px80));
-        border: var(--px80) solid rgba(255, 255, 255, .05);
-    }
-
-    55% {
-        top: calc(-1.125 * var(--px64));
-        left: calc(-1.125 * var(--px64));
-        border: calc(1.125 * var(--px64)) solid rgba(255, 255, 255, .025);
-    }
-
-    60% {
-        top: calc(-1 * var(--px64));
-        left: calc(-1 * var(--px64));
-        border: var(--px64) solid rgba(255, 255, 255, .05);
-    }
-
-    65% {
-        top: calc(-1.75 * var(--px32));
-        left: calc(-1.75 * var(--px32));
-        border: calc(1.75 * var(--px32)) solid rgba(255, 255, 255, .15);
-    }
-
-    70% {
-        top: calc(-1 * var(--px48));
-        left: calc(-1 * var(--px48));
-        border: var(--px48) solid rgba(255, 255, 255, .25);
-    }
-
-    75% {
-        top: calc(-1 * var(--px40));
-        left: calc(-1 * var(--px40));
-        border: var(--px40) solid rgba(255, 255, 255, .375);
-    }
-
-    80% {
-        top: calc(-1 * var(--px32));
-        left: calc(-1 * var(--px32));
-        border: var(--px32) solid rgba(255, 255, 255, .5);
-    }
-
-    85% {
-        top: calc(-1 * var(--px24));
-        left: calc(-1 * var(--px24));
-        border: var(--px24) solid rgba(255, 255, 255, .625);
-    }
-
-    90% {
-        top: calc(-1 * var(--px16));
-        left: calc(-1 * var(--px16));
-        border: var(--px16) solid rgba(255, 255, 255, .75);
-    }
-
-    95% {
-        top: calc(-1 * var(--px8));
-        left: calc(-1 * var(--px8));
-        border: var(--px8) solid rgba(255, 255, 255, .375);
-    }
-
-    100% {
-        top: 0;
-        left: 0;
-        border: unset;
-    }
-}
 
 @media (max-width:1024px) {
     body {

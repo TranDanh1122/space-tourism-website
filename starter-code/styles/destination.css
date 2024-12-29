@@ -1,4 +1,5 @@
 @import url(./common/header.css);
+@import url(./common/animation.css);
 
 body {
     background-image: url(../assets/destination/background-destination-desktop.jpg);
@@ -68,7 +69,7 @@ body {
     height: 100%;
     object-fit: cover;
     max-width: calc(10 * var(--px48));
-    animation: showContentLeftToRight 1s ease;
+    animation: showContentLeftToRight 1s linear;
 }
 
 .destination__info {
@@ -84,14 +85,14 @@ body {
     font: var(--text-2);
     color: var(--white);
     text-transform: uppercase;
-    animation: showContentTopDown .5s ease;
+    animation: showContentTopDown .5s linear;
 }
 
 .destination__desc {
     font: var(--text-9);
     color: var(--blue-300);
     margin-top: var(--px16);
-    animation: showContentTopDown .5s ease;
+    animation: showContentTopDown .5s linear;
 }
 
 .line {
@@ -105,7 +106,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    animation: showContentLeftToRight 1s ease;
+    animation: showContentLeftToRight 1s linear;
 }
 
 .destination__ultility span {
