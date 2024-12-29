@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* color */
+    --blue-900: #0B0D17;
+    --blue-300: ##D0D6F9;
+    --white: #fff;
+    /* typo */
+    --text-1: normal 9rem/171% "Bellefair", sans-serif;
+    --text-2: normal 6.25rem/114.5% "Bellefair", sans-serif;
+    --text-3: normal 3.5rem/64.2% "Bellefair", sans-serif;
+    --text-4: normal 2rem/36.7% "Bellefair", sans-serif;
+    --text-5: normal 1.75rem/33.6% "Barlow", sans-serif;
+    --text-5-lsp: letter-spacing: .25rem;
+    --text-6: normal 1.75rem/32.1% "Bellefair", sans-serif;
+    --text-7: normal 0.975rem/16.8% "Barlow", sans-serif;
+    --text-7-lsp: .125rem;
+    --text-8: normal 1rem/19.2% "Barlow", sans-serif;
+    --text-8-lsp: letter-spacing: .125rem;
+    --text-9: normal 1.125rem/180% "Barlow", sans-serif;
+
+    /* spacing */
+    --px128: 8rem;
+    --px96: 6rem;
+    --px80: 5rem;
+    --px64: 4rem;
+    --px48: 3rem;
+    --px40: 2.5rem;
+    --px32: 2rem;
+    --px24: 1.5rem;
+    --px16: 1rem;
+    --px12: .75rem;
+    --px8: .5rem;
+    --px4: .25rem;
+    --px2: .125rem
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
