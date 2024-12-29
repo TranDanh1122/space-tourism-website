@@ -17,7 +17,7 @@
 
 <body>
   <header class="container">
-    <nav open class="nav">
+    <nav class="nav">
       <div class="nav__bg"></div>
       <img src="./assets/shared/logo.svg" class="nav__logo" alt="logo"></img>
       <div class="nav__line"></div>
@@ -47,7 +47,7 @@
           </a>
         </li>
       </ul>
-      <img src="./assets/shared/icon-hamburger.svg" class="nav__mobile_menu" alt="nav__mobile_menu"></img>
+      <img src="./assets/shared/icon-hamburger.svg" close-src="./assets/shared/icon-close.svg" open-src="./assets/shared/icon-hamburger.svg" class="nav__mobile_menu" alt="nav__mobile_menu"></img>
     </nav>
   </header>
   <main>
@@ -71,6 +71,13 @@
   let nav = document.querySelector("nav")
   menuToggle.addEventListener('click', (e) => {
     nav.toggleAttribute('open')
+    let menuToggleIcon = e.target
+    if(nav.hasAttribute("open")) {
+      menuToggleIcon.setAttribute('src' , menuToggleIcon.getAttribute("close-src"))
+      return false
+    }
+    menuToggleIcon.setAttribute('src' , menuToggleIcon.getAttribute("open-src"))
+
   })
 </script>
 
