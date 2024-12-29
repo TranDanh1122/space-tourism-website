@@ -100,11 +100,14 @@ header {
 }
 
 .nav__item {
-    padding-top: var(--px40);
-    padding-bottom: var(--px40);
     font: var(--text-8);
     letter-spacing: var(--text-8-lsp);
     color: var(--white);
+}
+
+.nav__link {
+    padding-top: var(--px40);
+    padding-bottom: var(--px40);
 }
 
 .nav__item:hover {
@@ -189,6 +192,15 @@ header {
         spacing : 48px
         total 128px */
         margin-top: var(--px128);
+    }
+
+    .nav__item:hover {
+        border-bottom: unset;
+    }
+
+    .nav__link:hover {
+        border-right: var(--px4) solid var(--white);
+        display: block;
     }
 
     .nav__bg {
