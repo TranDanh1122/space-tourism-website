@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="stylesheet" href="./styles/destination.css">
+    <title>Frontend Mentor | Space tourism website</title>
+</head>
+
+<body>
+    <header class="container">
+        <nav class="nav">
+            <div class="nav__bg"></div>
+            <img src="./assets/shared/logo.svg" class="nav__logo" alt="logo"></img>
+            <div class="nav__line"></div>
+            <ul class="nav__menu">
+                <li class="nav__item">
+                    <a href="index.html" class="nav__link" title="Home">
+                        <span class="nav__order">00</span>
+                        Home
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="destination.html" class="nav__link" title="Destination">
+                        <span class="nav__order">01</span>
+                        Destination
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="crew.html" class="nav__link" title="Crew">
+                        <span class="nav__order">02</span>
+                        Crew
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="technology.html" class="nav__link" title="Technology">
+                        <span class="nav__order">03</span>
+                        Technology
+                    </a>
+                </li>
+            </ul>
+            <i src="./assets/shared/icon-hamburger.svg" class="nav__mobile_menu" alt="nav__mobile_menu"></i>
+        </nav>
+    </header>
+
+
+    <main class="container">
+        <div class="destination">
+            <h1 class="destination__step"> <span>01</span> Pick your destination</h1>
+            <div tabindex="1" class="tab">
+                <img loading="eager" src="./assets/destination/image-moon.webp" class="destination__image" alt="Moon">
+                <div class="tab__content">
+                    <ul class="tab__nav">
+                        <li active tabindex="1" class="tab__item">Moon</li>
+                        <li tabindex="2" class="tab__item">Mars</li>
+                        <li tabindex="3" class="tab__item">Europa</li>
+                        <li tabindex="4" class="tab__item">Titan</li>
+                    </ul>
+                    <div class="destination__info">
+                        <div class="destination__content">
+                            <h2 class="destination__name">Moon</h2>
+                            <p class="destination__desc"> See our planet as you’ve never seen it before. A perfect relaxing
+                                trip
+                                away to help
+                                regain perspective and come back refreshed. While you’re there, take in some history
+                                by visiting the Luna 2 and Apollo 11 landing sites.</p>
+                        </div>
+                        <div class="line"></div>
+                        <div class="destination__ultility">
+                            <div class="destination__distance">
+                                <span> Avg. distance</span>
+                                <h3> 384,400 km</h3>
+                            </div>
+                            <div class="destination__est">
+                                <span>Est. travel time</span>
+                                <h3> 3 days</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+</body>
+<script src="../vendor/script.js"></script>
+
+</html>
