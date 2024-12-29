@@ -233,7 +233,10 @@ header {
         border-right: var(--px4) solid var(--white);
         display: block;
     }
-
+    .nav__link {
+        padding-top: var(--px16);
+        padding-bottom: var(--px16);
+    }
     .nav__bg {
         display: none;
     }
