@@ -2,27 +2,26 @@
 @import url(./common/animation.css);
 
 body {
-    background-image: url(../assets/crew/background-crew-desktop.jpg);
+    background-image: url(../assets/technology/background-technology-desktop.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
 
-.crew {
+.technology {
     margin: 0 auto;
     margin-top: var(--px48);
-    max-width: 1110px;
 }
 
-.crew__step {
+.technology__step {
     font: var(--text-5);
     letter-spacing: var(--text-5-lsp);
     color: var(--white);
     text-transform: uppercase;
 }
 
-.crew__step span {
+.technology__step span {
     color: rgba(255, 255, 255, .25);
     font: bold 1.75rem/100% "Barlow", sans-serif
 }
@@ -38,8 +37,9 @@ body {
     padding-top: calc(2 * var(--px96));
     width: 50%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     justify-content: space-between;
+    gap: var(--px64);
 }
 
 .tab__nav {
@@ -47,38 +47,37 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    flex-direction: column;
     gap: var(--px32);
     margin-top: var(--px80);
-
 }
-
-
 
 .tab__item {
     display: block;
-    width: var(--px16);
-    height: var(--px16);
     cursor: pointer;
     border-radius: 50%;
     background-color: var(--almost_white);
+    padding: 24px 30px;
+    border-radius: 50%;
 }
 
 .tab__item[active] {
     background-color: var(--white);
+    color: var(--blue-900);
 
 }
 
-.crew__image {
+.technology__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    max-width: 540px;
-    max-height: 680px;
+    max-width: 600px;
+    max-height: 600px;
     animation: showContentLeftToRight 1s linear;
     margin-top: var(--px96);
 }
 
-.crew__info {
+.technology__info {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -87,21 +86,21 @@ body {
     margin-top: var(--px40);
 }
 
-.crew__position {
+.technology__position {
     font: var(--text-4);
     color: rgba(255, 255, 255, .5);
     text-transform: uppercase;
     animation: showContentTopDown .5s linear;
 }
 
-.crew__name {
+.technology__name {
     font: var(--text-3);
     color: var(--white);
     text-transform: uppercase;
     animation: showContentTopDown .5s linear;
 }
 
-.crew__desc {
+.technology__desc {
     font: var(--text-9);
     color: var(--blue-300);
     margin-top: var(--px16);
@@ -116,49 +115,56 @@ body {
 
 @media (max-width:1024px) {
     body {
-        background-image: url(../assets/crew/background-crew-tablet.jpg);
+        background-image: url(../assets/technology/background-technology-tablet.jpg);
     }
 
-    .crew {
+    .technology {
         margin-top: var(--px40);
     }
 
     .tab {
-        flex-direction: column;
+        flex-direction: column-reverse ;
         gap: var(--px48);
     }
 
     .tab__content {
         width: 100%;
         padding: 0 var(--px80);
+        flex-direction: column-reverse;
     }
 
     .tab__nav {
+        flex-direction: row;
         width: max-content;
         margin: 0 auto;
-        margin-top: var(--px32);
-    }
-
-    .crew__image {
         margin-top: var(--px16);
     }
 
-    .crew__name {
+
+    .technology__image {
         margin-top: var(--px16);
     }
 
-    .crew__info {
+    .technology__name {
+        margin-top: var(--px16);
+    }
+
+    .technology__info {
         text-align: center;
     }
 }
 
 @media (max-width:767px) {
     body {
-        background-image: url(../assets/crew/background-crew-mobile.jpg);
+        background-image: url(../assets/technology/background-technology-mobile.jpg);
     }
 
-    .crew__step {
+    .technology__step {
         text-align: center;
+    }
+
+    .tab__item {
+        padding: 12px 16px;
     }
 
     .tab__content {
