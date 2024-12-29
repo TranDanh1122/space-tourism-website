@@ -10,16 +10,52 @@
     href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap"
     rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="./styles/common/header.css">
+  <link rel="stylesheet" href="./styles/home.css">
   <title>Frontend Mentor | Space tourism website</title>
 </head>
 
 <body>
+  <header class="container">
+    <nav open class="nav">
+      <div class="nav__bg"></div>
+      <img src="./assets/shared/logo.svg" class="nav__logo" alt="logo"></img>
+      <div class="nav__line"></div>
+      <ul class="nav__menu">
+        <li class="nav__item">
+          <a href="index.html" class="nav__link" title="Home">
+            <span class="nav__order">00</span>
+            Home
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="destination.html" class="nav__link" title="Destination">
+            <span class="nav__order">01</span>
+            Destination
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="crew.html" class="nav__link" title="Crew">
+            <span class="nav__order">02</span>
+            Crew
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="technology.html" class="nav__link" title="Technology">
+            <span class="nav__order">03</span>
+            Technology
+          </a>
+        </li>
+      </ul>
+      <img src="./assets/shared/icon-hamburger.svg" class="nav__mobile_menu" alt="nav__mobile_menu"></img>
+    </nav>
+  </header>
+  <main>
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+
+
+  </main>
+
 
   So, you want to travel to
   Space
@@ -30,5 +66,12 @@
   Explore
 
 </body>
+<script>
+  let menuToggle = document.querySelector(".nav__mobile_menu")
+  let nav = document.querySelector("nav")
+  menuToggle.addEventListener('click', (e) => {
+    nav.toggleAttribute('open')
+  })
+</script>
 
 </html>
