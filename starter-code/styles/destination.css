@@ -55,6 +55,7 @@ body {
     padding-bottom: var(--px16);
     text-transform: uppercase;
     color: var(--blue-300);
+    cursor: pointer;
 }
 
 .tab__item[active],

@@ -54,8 +54,11 @@
     <main class="container">
         <div class="destination">
             <h1 class="destination__step"> <span>01</span> Pick your destination</h1>
-            <div tabindex="1" class="tab">
-                <img loading="eager" src="./assets/destination/image-moon.webp" class="destination__image" alt="Moon">
+            <div class="tab">
+                <div id="img_wrapper">
+                    <img loading="eager" src="./assets/destination/image-moon.webp" class="destination__image"
+                        alt="Moon">
+                </div>
                 <div class="tab__content">
                     <ul class="tab__nav">
                         <li active tabindex="1" class="tab__item">Moon</li>
@@ -66,7 +69,8 @@
                     <div class="destination__info">
                         <div class="destination__content">
                             <h2 class="destination__name">Moon</h2>
-                            <p class="destination__desc"> See our planet as you’ve never seen it before. A perfect relaxing
+                            <p class="destination__desc"> See our planet as you’ve never seen it before. A perfect
+                                relaxing
                                 trip
                                 away to help
                                 regain perspective and come back refreshed. While you’re there, take in some history
@@ -97,5 +101,30 @@
 
 </body>
 <script src="../vendor/script.js"></script>
+<script src="../vendor/tab.js"></script>
+<script>
+    let setContent = (data) => {
+        return `
+                <div class="destination__content">
+                    <h2 class="destination__name">${data.name}</h2>
+                    <p class="destination__desc">${data.description}</p>
+                </div>
+                <div class="line"></div>
+                    <div class="destination__ultility">
+                        <div class="destination__distance">
+                            <span> Avg. distance</span>
+                            <h3> ${data.distance}</h3>
+                        </div>
+                        <div class="destination__est">
+                            <span>Est. travel time</span>
+                            <h3> ${data.travel}</h3>
+                        </div>
+                    </div>`
+    }
+    let setImage = (src, name) => `<img loading="eager" src="${src}" class="destination__image" alt="${name}">`
+    let image = document.querySelector('#img_wrapper')
+    let contentWrapper = document.querySelector('.destination__info')
+    window.coreTab.init("destinations", contentWrapper, setContent, image, setImage, "webp")
+</script>
 
 </html>
