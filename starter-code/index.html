@@ -10,7 +10,6 @@
     href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap"
     rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  <link rel="stylesheet" href="./styles/common/header.css">
   <link rel="stylesheet" href="./styles/home.css">
   <title>Frontend Mentor | Space tourism website</title>
 </head>
@@ -47,40 +46,35 @@
           </a>
         </li>
       </ul>
-      <img src="./assets/shared/icon-hamburger.svg" close-src="./assets/shared/icon-close.svg" open-src="./assets/shared/icon-hamburger.svg" class="nav__mobile_menu" alt="nav__mobile_menu"></img>
+      <i src="./assets/shared/icon-hamburger.svg"  class="nav__mobile_menu" alt="nav__mobile_menu"></i>
     </nav>
   </header>
 
-  
-  <main>
 
-
-
+  <main class="container">
+    <div class="hero">
+      <div class="hero__content">
+        <h2 class="hero__subtitle"> So, you want to travel to</h2>
+        <h1 class="hero__title">
+          Space
+        </h1>
+        <p class="hero__desc">
+          Let’s face it; if you want to go to space, you might as well genuinely go to
+          outer space and not hover kind of on the edge of it. Well sit back, and relax
+          because we’ll give you a truly out of this world experience!
+        </p>
+      </div>
+      <a href="destination.html" title="space" class="hero__explode">Explore</a>
+    </div>
   </main>
 
 
-  So, you want to travel to
-  Space
-  Let’s face it; if you want to go to space, you might as well genuinely go to
-  outer space and not hover kind of on the edge of it. Well sit back, and relax
-  because we’ll give you a truly out of this world experience!
 
-  Explore
+
+
+
 
 </body>
-<script>
-  let menuToggle = document.querySelector(".nav__mobile_menu")
-  let nav = document.querySelector("nav")
-  menuToggle.addEventListener('click', (e) => {
-    nav.toggleAttribute('open')
-    let menuToggleIcon = e.target
-    if(nav.hasAttribute("open")) {
-      menuToggleIcon.setAttribute('src' , menuToggleIcon.getAttribute("close-src"))
-      return false
-    }
-    menuToggleIcon.setAttribute('src' , menuToggleIcon.getAttribute("open-src"))
-
-  })
-</script>
+<script src="../vendor/script.js"></script>
 
 </html>
